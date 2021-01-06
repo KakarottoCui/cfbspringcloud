@@ -1,0 +1,15 @@
+server:
+  port: 8082 # 服务提供方
+
+# 指定当前eureka客户端的注册地址,
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka/
+  instance:
+    hostname: localhost
+
+#当前服务名称
+spring:
+  application:
+    name: eurekaservice1
